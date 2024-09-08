@@ -256,4 +256,13 @@ class Gemini {
     return fileUri;
   }
 
+  /**
+   * モデルを変更する
+   * @param {'1.5flash' | '1.5pro' | '1.0pro'} model - 利用するAIモデル
+   * @return {Gemini}
+   */
+  changeModel(model){
+    this.model = model;
+    return this;
+  }
 }
