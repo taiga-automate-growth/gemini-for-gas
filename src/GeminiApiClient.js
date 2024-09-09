@@ -262,7 +262,19 @@ class GeminiApiClient {
    * @return {GeminiApiClient}
    */
   changeModel(model){
-    this.model = model;
+    if(model === '1.5flash'){
+      this.model = 'gemini-1.5-flash';
+      
+    }else if(model === '1.5pro'){
+      this.model = 'gemini-1.5-pro';
+
+    }else if(model === '1.0pro'){
+      this.model = 'gemini-1.0-pro';
+    
+    }else{
+      throw new Error(`不正なモデルが指定されています:${model}`);
+    }
+    
     return this;
   }
 }
