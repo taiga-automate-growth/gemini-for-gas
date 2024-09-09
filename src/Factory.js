@@ -5,6 +5,6 @@
  * @return {GeminiApiClient}
  */
 function create(apikey,model){
-    const gemini = new Gemini(apikey, model);
+    const gemini = new GeminiApiClient(apikey, model);
     return gemini;
 }
